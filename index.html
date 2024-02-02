@@ -1,0 +1,132 @@
+<!-- 05-06 Imágenes En esta práctica debes ingresar varias imágenes en una
+página web y comparar el tiempo de carga hasta minimizarlo por completo. Utiliza
+sitios libres de derechos para descargar 12 imágenes con la resolución más alta
+posible. Incluye formatos JPG, GIF y PNG. Crear una página web para organizar
+las imágenes usando el modelo flexbox, de modo que quepan dos imágenes por
+ancho.Obtendrás 6 filas de dos imágenes por fila. NO CAMBIAR EL TAMAÑO ORIGINAL.
+Agregue etiquetas ALT a todas las imágenes. Respeta el copyleft utilizando las
+etiquetas apropiadas para dar el crédito necesario al autor de la imagen. Crear
+un proyecto en Github y publicar la página. Siga el siguiente
+manual:https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site
+Usar herramientas de Google (https://pagespeed.web.dev/) para comprobar el
+tiempo de carga de la página, crear una tabla e indicar el tamaño medio, formato
+de imagen utilizado y tiempo de carga.Agregue la tabla a la página web. COPIAR
+LA PÁGINA WEB EN OTRA.Optimiza el tamaño de las imágenes. Utiliza etiquetas
+PICTURE, SRCSET y MEDIA para incluir distintos tamaños y formatos de imagen.
+Realiza nuevamente la prueba de tiempo de carga y actualiza los datos de la
+tabla. COPIA LA ÚLTIMA PÁGINA WEB EN OTRA.Ahora seguiremos los consejos de la
+página de Google. en cuanto a formatos.Puedes utilizar la herramienta gráfica
+que quieras para configurarlos, a modo de ejemplo aquí tienes varias:
+https://www.dosmedia.com/tratamiento-de-imagenes-para-tu-pagina-web/ Aplicación
+de Estilos CSS: Usar object-fit y object-position para asegurar que las imágenes
+se muestren correctamente en su contenedor. Implementar srcset y sizes en las
+imágenes para hacerlas responsivas en diferentes tamaños de pantalla. Utilizar
+la etiqueta <picture> para algunas imágenes, ofreciendo diferentes formatos
+según el navegador. Efectos Visuales Adicionales: Aplicar diferentes filters a
+algunas imágenes para cambiar su apariencia (por ejemplo, sepia, grayscale).
+Utilizar opacity en algunas imágenes para crear un efecto de transparencia.
+Implementar clip-path en al menos una imagen para darle una forma única. Añadir
+border-image a alguna imagen para mostrar cómo se puede usar una imagen como
+borde. Responsividad: Asegurarse de que la galería se vea bien en diferentes
+tamaños de pantalla, incluyendo teléfonos móviles y tablets. Interactividad:
+Agregar interactividad con JavaScript, como cambiar la opacidad o el filtro al
+pasar el mouse sobre las imágenes. ENTREGA: una sóla imagen con las tres
+capturas de pantalla y un sólo documento HTML con el código final. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="script.js"></script>
+                <link rel="stylesheet" href="style.css">
+                    <title>Document</title>
+                </head>
+                <body>
+                    <h1>Ejercicicio con imágenes</h1>
+                    <div class="container">
+                        <div class="imagen" id="imagen1">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img1_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img1_medium.webp">
+                              <img src="img/img1_medium.webp" alt="img1">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img2_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img2_medium.webp">
+                              <img src="img/img2_medium.webp" alt="img2">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img3_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img3_medium.webp">
+                              <img src="img/img3_medium.webp" alt="img3">
+                            </picture>
+                          </div>
+                          <div class="imagen clip-path-example" id="imagen4">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img4_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img4_medium.webp">
+                              <img src="img/img4_medium.webp" alt="img4">
+                            </picture>
+                          </div>
+                          <div class="imagen border-image-example">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img5_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img5_medium.webp">
+                              <img src="img/img5_medium.webp" alt="img5">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img6_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img6_medium.webp">
+                              <img src="img/img6_medium.webp" alt="img6">
+                            </picture>
+                          </div>
+                          <div class="imagen" id="imagen7">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img7_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img7_medium.webp">
+                              <img src="img/img7_medium.webp" alt="img7">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img8_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img8_medium.webp">
+                              <img src="img/img8_medium.webp" alt="img8">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img9_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img9_medium.webp">
+                              <img src="img/img9_medium.webp" alt="img9">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <source media="(max-width: 600px)" srcset="img/img10_small.webp">
+                              <source media="(min-width: 601px)" srcset="img/img10_medium.webp">
+                              <img src="img/img10_medium.webp" alt="img10">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <img src="img/img11.webp" alt="img11">
+                            </picture>
+                          </div>
+                          <div class="imagen">
+                            <picture>
+                              <img src="img/img12.webp" alt="img12">
+                            </picture>
+                          </div>
+                            </div>              
+                            <div class="footer">
+                                     Imágenes de Pexels ©
+                                 </div>
+                             </body>
+                         </html>
